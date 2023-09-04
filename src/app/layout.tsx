@@ -1,7 +1,8 @@
-import Menu from "@/components/menu/menu";
+import Menu from "@/components/common/menu/menu";
 import "./globals.css";
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
+import Footer from "@/components/common/footer/footer";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -20,6 +21,7 @@ export default function RootLayout({
       <body className={inter.className}>
         <Menu />
         {children}
+        <Footer />
       </body>
     </html>
   );
