@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import { Button } from "../../ui/button";
+import { handleInvoke } from "@/lib/tanstack-query/feature/_feature/_feature-slice";
 
 export default function Menu() {
   return (
@@ -13,8 +14,12 @@ export default function Menu() {
           </div>
           <nav className="text-zinc-300">
             <div className="flex gap-2">
+              <Button onClick={() => handleInvoke()}>Invoke</Button>
               <Link href="/">
                 <Button>Home</Button>
+              </Link>
+              <Link href="/add">
+                <Button>Add</Button>
               </Link>
               <Link href="/getbyid">
                 <Button>GetById</Button>
